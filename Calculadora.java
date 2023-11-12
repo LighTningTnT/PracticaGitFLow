@@ -20,6 +20,10 @@ public class Calculadora {
         return a - b;
     }
 
+    public static int multiplicar(int a, int b) {
+        return a * b;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -32,8 +36,9 @@ public class Calculadora {
         System.out.println("Operaciones disponibles:");
         System.out.println("1. Suma");
         System.out.println("2. Resta");
+        System.out.println("3. Multiplicación");
 
-        System.out.print("Seleccione una operación (1-2): ");
+        System.out.print("Seleccione una operación (1-3): ");
         int opcion = scanner.nextInt();
 
         switch (opcion) {
@@ -42,6 +47,9 @@ public class Calculadora {
                 break;
             case 2:
                 System.out.println("Resta: " + restar(num1, num2));
+                break;
+            case 3:
+                System.out.println("Multiplicación: " + multiplicar(num1, num2));
                 break;
             default:
                 System.out.println("Opción no válida.");
